@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,lightning:availableForFlowScreens" access="global" >
+    	<aura:attribute name="Object" type="String" default="Contact"/>
+    	<aura:attribute name="recordId" type="String" />
+      	<aura:attribute name="fields" type="String" />
+        <aura:attribute name="fieldListArr" type="String[]" default="['Name']" />
+        <aura:attribute name="columns" type="Integer" default="2" />    
+        <aura:attribute name="cardicon" type="String" />   
+        <aura:attribute name="cardtitle" type="String" />  
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+<lightning:card iconName="{!v.cardicon}" title="{!v.cardtitle}">
+    <div class="slds-p-left_large slds-p-right_medium">
+    <lightning:recordForm
+        recordId="{!v.recordId}"
+        objectApiName="{!v.Object}"
+        fields="{!v.fieldListArr}"
+        columns="{!v.columns}"
+        mode="readonly" />
+    </div>
+    </lightning:card>
+</aura:component>
