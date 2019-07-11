@@ -1,8 +1,8 @@
 <design:component>
 
         <design:attribute name="Object" label="Object API Name" />
-    	  <design:attribute name="recordId" label="Record Id" />
-        <design:attribute name="fields" label="Fields" description="Comma separated list of field API Names to display.  Each field in single quotes."  />
+    	<design:attribute name="recordId" label="Record Id" />
+        <design:attribute name="fields" label="Fields" description="Comma separated list of field API Names to display."  />
         <design:attribute name="columns" label="Number of Columns" />
         <design:attribute name="cardicon" label="Card Icon" />
         <design:attribute name="cardtitle" label="Card Title" />
